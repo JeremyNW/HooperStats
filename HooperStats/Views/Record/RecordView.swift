@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecordView: View {
+    @StateObject var model = RecordViewModel()
     var body: some View {
         NavigationView {
             List {
@@ -17,7 +18,7 @@ struct RecordView: View {
             
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    NavigationLink(destination: Text("GameEntry")) {
+                    NavigationLink(destination: GameCreatorView(recordViewModel: model)) {
                         Image(systemName: "plus")
                     }
                 }
