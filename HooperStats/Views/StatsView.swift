@@ -69,6 +69,7 @@ struct StatsView: View {
                 }, label: {
                     Text("Gallery")
                 })
+
             }
         }
     }
