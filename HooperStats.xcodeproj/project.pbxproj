@@ -14,6 +14,9 @@
 		1FFA092327C7D08B00DE7C13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA092227C7D08B00DE7C13 /* MainView.swift */; };
 		1FFA092527C7D0D800DE7C13 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA092427C7D0D800DE7C13 /* StatsView.swift */; };
 		1FFA092727C7D0DF00DE7C13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA092627C7D0DF00DE7C13 /* SettingsView.swift */; };
+		7F64563B27C9485B00A9E4B6 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F64563A27C9485B00A9E4B6 /* Camera.swift */; };
+		7F64563D27C948D900A9E4B6 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F64563C27C948D900A9E4B6 /* PhotoPicker.swift */; };
+		7F64563F27C94A4000A9E4B6 /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F64563E27C94A4000A9E4B6 /* StatsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		1FFA092227C7D08B00DE7C13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1FFA092427C7D0D800DE7C13 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		1FFA092627C7D0DF00DE7C13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7F64563A27C9485B00A9E4B6 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		7F64563C27C948D900A9E4B6 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		7F64563E27C94A4000A9E4B6 /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 				1FFA092227C7D08B00DE7C13 /* MainView.swift */,
 				1FFA092627C7D0DF00DE7C13 /* SettingsView.swift */,
 				1FFA092427C7D0D800DE7C13 /* StatsView.swift */,
+				7F64563E27C94A4000A9E4B6 /* StatsModel.swift */,
+				7F64563A27C9485B00A9E4B6 /* Camera.swift */,
+				7F64563C27C948D900A9E4B6 /* PhotoPicker.swift */,
 				1FFA091627C550AD00DE7C13 /* RecordView.swift */,
 			);
 			path = Views;
@@ -154,8 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F64563D27C948D900A9E4B6 /* PhotoPicker.swift in Sources */,
 				1FFA092727C7D0DF00DE7C13 /* SettingsView.swift in Sources */,
 				1FFA092527C7D0D800DE7C13 /* StatsView.swift in Sources */,
+				7F64563F27C94A4000A9E4B6 /* StatsModel.swift in Sources */,
+				7F64563B27C9485B00A9E4B6 /* Camera.swift in Sources */,
 				1FFA091727C550AD00DE7C13 /* RecordView.swift in Sources */,
 				1FFA092327C7D08B00DE7C13 /* MainView.swift in Sources */,
 				1FFA091527C550AD00DE7C13 /* HooperStatsApp.swift in Sources */,
