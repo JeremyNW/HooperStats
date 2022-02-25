@@ -9,7 +9,23 @@ import SwiftUI
 
 struct StatsView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("James Smith")
+                .padding()
+            VStack(alignment: .leading) {
+                Image(systemName: "person.circle")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+                    .frame(width: 200.0, height: 200.0)
+            Text("PPG:")
+                .padding()
+            Text("APG:")
+                .padding()
+            Text("RPG:")
+                .padding()
+            }
+        }
     }
 }
 
