@@ -9,7 +9,7 @@ import Foundation
 
 class GameCreatorModel: ObservableObject {
     @Published var type: GameType = .threeVsThree
-    @Published var points = 0.0
+    @Published var points = 0
     @Published var assists = 0
     @Published var rebounds = 0
     @Published var gameDetails = ""
@@ -17,7 +17,7 @@ class GameCreatorModel: ObservableObject {
     
     func onAppear(game: Game) {
         type = game.type
-        points = Double(game.points)
+        points = game.points
         assists = game.assists
         rebounds = game.rebounds
         gameDetails = game.gameDetails
