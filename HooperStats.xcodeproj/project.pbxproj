@@ -18,6 +18,9 @@
 		1FFA092C27C92AD400DE7C13 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA092B27C92AD400DE7C13 /* RecordViewModel.swift */; };
 		1FFA093227C934BF00DE7C13 /* GameCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA093127C934BF00DE7C13 /* GameCreatorView.swift */; };
 		1FFA093427C9374D00DE7C13 /* GameCreatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA093327C9374D00DE7C13 /* GameCreatorModel.swift */; };
+		7F64563B27C9485B00A9E4B6 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F64563A27C9485B00A9E4B6 /* Camera.swift */; };
+		7F64563D27C948D900A9E4B6 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F64563C27C948D900A9E4B6 /* PhotoPicker.swift */; };
+		7F64563F27C94A4000A9E4B6 /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F64563E27C94A4000A9E4B6 /* StatsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		1FFA092B27C92AD400DE7C13 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
 		1FFA093127C934BF00DE7C13 /* GameCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCreatorView.swift; sourceTree = "<group>"; };
 		1FFA093327C9374D00DE7C13 /* GameCreatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCreatorModel.swift; sourceTree = "<group>"; };
+		7F64563A27C9485B00A9E4B6 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		7F64563C27C948D900A9E4B6 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		7F64563E27C94A4000A9E4B6 /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,9 +205,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFA093427C9374D00DE7C13 /* GameCreatorModel.swift in Sources */,
+				7F64563D27C948D900A9E4B6 /* PhotoPicker.swift in Sources */,
 				1FFA092727C7D0DF00DE7C13 /* SettingsView.swift in Sources */,
 				1FFA092C27C92AD400DE7C13 /* RecordViewModel.swift in Sources */,
 				1FFA092527C7D0D800DE7C13 /* StatsView.swift in Sources */,
+				7F64563F27C94A4000A9E4B6 /* StatsModel.swift in Sources */,
+				7F64563B27C9485B00A9E4B6 /* Camera.swift in Sources */,
 				1FFA091727C550AD00DE7C13 /* RecordView.swift in Sources */,
 				1FFA092A27C858D100DE7C13 /* Game.swift in Sources */,
 				1FFA093227C934BF00DE7C13 /* GameCreatorView.swift in Sources */,
@@ -337,7 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HooperStats/Preview Content\"";
-				DEVELOPMENT_TEAM = FL58422VA9;
+				DEVELOPMENT_TEAM = B6SA6GUYKS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -366,7 +375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HooperStats/Preview Content\"";
-				DEVELOPMENT_TEAM = FL58422VA9;
+				DEVELOPMENT_TEAM = B6SA6GUYKS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
