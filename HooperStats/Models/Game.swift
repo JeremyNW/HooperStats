@@ -29,6 +29,17 @@ class Game: Codable {
 
 
 enum GameType: String, Codable {
-    case threeVsThree
-    case fiveVsFive
+    case threeVsThree = "3 vs. 3"
+    case fiveVsFive = "5 vs. 5"
 }
+
+
+extension Game: Equatable, Hashable {
+    static func == (lhs: Game, rhs: Game) -> Bool {
+        lhs === rhs
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(ObjectIdentifier(self))
+    }
+ }

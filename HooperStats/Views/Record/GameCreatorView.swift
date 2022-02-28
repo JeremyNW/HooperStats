@@ -10,6 +10,7 @@ import SwiftUI
 struct GameCreatorView: View {
     @ObservedObject var recordViewModel: RecordViewModel
     @StateObject var viewModel = GameCreatorModel()
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack {
             HStack{
@@ -44,6 +45,7 @@ struct GameCreatorView: View {
             ToolbarItem(placement: .primaryAction) {
                 Button(action: {
                     recordViewModel.createGame(type: viewModel.type, points: Int(viewModel.points), assists: viewModel.assists, rebounds: viewModel.rebounds, gameDetails: viewModel.gameDetails, date: viewModel.date)
+                        dismiss()
                 }, label: {
                     Text("Save")
                 })
