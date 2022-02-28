@@ -9,6 +9,7 @@ import Foundation
 
 class RecordViewModel: ObservableObject {
     @Published var games: [Game] = []
+    
     private var saveFileURL: URL? {
         try? FileManager.default.url(
             for: .documentDirectory,
