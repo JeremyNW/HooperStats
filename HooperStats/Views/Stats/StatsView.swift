@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct StatsView: View {
+    @StateObject var gameModel = RecordViewModel()
     @StateObject var model = StatsViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -25,21 +27,37 @@ struct StatsView: View {
                         
                     } else {
                         
-                    Image(systemName: "person.circle")
-                        .resizable(resizingMode: .stretch)
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
-                        .frame(width: 200.0, height: 200.0)
+                        Image(systemName: "person.circle")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                            .padding()
+                            .frame(width: 200.0, height: 200.0)
                     }
-                    Text("PPG:")
-                        .padding()
-                    Text("APG:")
-                        .padding()
-                    Text("RPG:")
-                        .padding()
+                    if !gameModel.games.isEmpty {
+                        HStack {
+                            Text("PPG:")
+                                .padding()
+                            Text("\(model.pointsPerGame(games: gameModel.games), specifier: "%.2f")")
+                            
+                        }
+                        
+                        HStack {
+                            Text("APG:")
+                                .padding()
+                            Text("\(model.assistPerGame(games: gameModel.games), specifier: "%.2f")")
+                        }
+                        
+                        HStack {
+                            Text("RPG:")
+                                .padding()
+                            Text("\(model.reboundsPerGame(games: gameModel.games), specifier: "%.2f")")
+                        }
+                        
+                    }
                 }
             }
             .navigationTitle("Stats")
+            .onAppear(perform: gameModel.loadGames)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: {
@@ -69,11 +87,12 @@ struct StatsView: View {
                 }, label: {
                     Text("Gallery")
                 })
-
+                
             }
         }
     }
 }
+// }
 
 struct StatsView_Previews: PreviewProvider {
     static var previews: some View {
