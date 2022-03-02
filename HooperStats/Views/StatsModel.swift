@@ -20,5 +20,24 @@ class StatsViewModel: ObservableObject {
             rawValue
         }
     }
+    func pointsPerGame(games: [Game]) -> Double {
+        Double(games.reduce(0, { total, game in
+            total + game.points
+        })) /
+        Double(games.count)
+    }
+    func assistPerGame(games: [Game]) -> Double {
+        Double(games.reduce(0, { total, game in
+            total + game.assists
+        })) /
+        Double(games.count)
+    }
+    func reboundsPerGame(games: [Game]) -> Double {
+        Double(games.reduce(0, { total, game in
+            total + game.rebounds
+        })) /
+        Double(games.count)
+    }
 }
+
 
