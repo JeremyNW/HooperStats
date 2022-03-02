@@ -58,6 +58,7 @@ struct StatsView: View {
             }
             .navigationTitle("Stats")
             .onAppear(perform: gameModel.loadGames)
+            .onAppear(perform: model.onAppear)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: {
