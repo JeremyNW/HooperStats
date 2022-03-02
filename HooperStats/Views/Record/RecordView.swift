@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct RecordView: View {
     @StateObject var model = RecordViewModel()
     var game: Game?
@@ -43,7 +45,7 @@ struct RecordView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RecordView_Previews: PreviewProvider {
     static var previews: some View {
         RecordView()
     }

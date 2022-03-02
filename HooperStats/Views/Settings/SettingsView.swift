@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @AppStorage("isOnboarded") var isOnboarded = false
     var body: some View {
         NavigationView {
             List {
                 Section("Preferences") {
-                    NavigationLink(destination: Text("Todo")) {
-                        Text("Tutorial - Onboarding")
-                    }
+                    Button(action: {
+                        isOnboarded = false
+                    }, label: {
+                       Text("Tutorial")
+                            .tint(.primary)
+                    })
                     HStack {
                         Text("Notifications")
                        // ADD TOGGLE
