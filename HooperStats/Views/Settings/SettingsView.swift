@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct SettingsView: View {
+    
     @AppStorage("isOnboarded") var isOnboarded = false
+    @AppStorage("isNotificationsEnabled") var isNotificationsEnabled = false
+    @StateObject var model = SettingsModel()
+    
     var body: some View {
         NavigationView {
             List {
@@ -19,17 +24,19 @@ struct SettingsView: View {
                        Text("Tutorial")
                             .tint(.primary)
                     })
-                    HStack {
-                        Text("Notifications")
-                       // ADD TOGGLE
-                    }
+                   
+                        Toggle("Notification", isOn: $isNotificationsEnabled)
+                    
                 }
                 Section("Extras") {
-                    NavigationLink(destination: Text("")) {
+                    NavigationLink(destination: Text("Big thank you to Undraw for the images used in our app! \n" )
+                                    .font(.headline)
+                                    .padding()
+                    ) {
                         Text("Acknowledgements")
                     }
-                    NavigationLink(destination: Text("")) {
-                        Text("Contact us")
+                    NavigationLink(destination: ContactView()) {
+                        Text("Contact Us")
                     }
                     NavigationLink(destination: Text("Feedback")) {
                         Text("Feedback")
@@ -38,6 +45,10 @@ struct SettingsView: View {
             }
             .navigationBarTitle("Settings", displayMode: .inline)
         }
+        .onChange(of: isNotificationsEnabled) { isEnabled in
+            model.requestNotificationAuthorization()
+        }
+        
     }
 }
 
