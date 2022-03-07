@@ -20,12 +20,16 @@ struct RecordView: View {
                     NavigationLink(destination: GameViewer(game: game)) {
                         VStack(alignment: .leading) {
                             if let game = game {
-                                Text("Game Type: \(game.type.rawValue)")
+                                Text(game.date, style: .date)
                                     .font(.headline)
+                                    .padding(1)
+                                Text("Game Type: \(game.type.rawValue)")
+                                    .font(.body)
+                                    .padding(1)
                                 Text("Points: \(game.points)")
                                     .font(.body)
-                                Text(game.date, style: .date)
-                                    .font(.body)
+                                    .padding(1)
+                                
                             }
                         }
                     }

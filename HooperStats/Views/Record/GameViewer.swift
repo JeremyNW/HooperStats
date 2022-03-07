@@ -11,31 +11,43 @@ struct GameViewer: View {
     let game: Game
     
     var body: some View {
-        VStack(spacing: 35) {
+        Form {
             VStack {
-                Text("\(game.type.rawValue)")
-                    .font(.largeTitle)
-                Text(game.date, style: .date)
+                Label("\(game.type.rawValue)", systemImage: game.type.imageName)
+                    .tint(.primary)
                     .font(.headline)
+                
             }
-            Spacer()
+           
             VStack(alignment: .leading) {
-            Text("Points: \(game.points)")
-                .font(.body)
+                HStack {
+            Text("Points:")
+                        .bold()
+            Text("\(game.points)")
+                }
                 .padding()
-            Text("Assists: \(game.assists)")
-                .font(.body)
+                HStack {
+            Text("Assists:")
+                        .bold()
+            Text("\(game.assists)")
+                }
                 .padding()
-            Text("Rebounds: \(game.rebounds)")
-                    .padding()
+                HStack {
+            Text("Rebounds:")
+                        .bold()
+            Text("\(game.rebounds)")
+                }
+                .padding()
             }
-            Spacer()
-            Text("Game Details")
+            VStack {
+            Text("Game Details:")
+                    .padding()
             Text(game.gameDetails)
-                .padding()
                 .border(.thinMaterial)
-            Spacer()
+            }
         }
+        .navigationTitle(Text(game.date, style: .date))
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

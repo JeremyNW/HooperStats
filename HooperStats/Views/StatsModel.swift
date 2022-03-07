@@ -8,11 +8,13 @@
 import Foundation
 import UIKit
 import Combine
+import SwiftUI
 
 class StatsViewModel: ObservableObject {
     @Published var isPresentingAlert = false
     @Published var presentedView: PresentedView?
     @Published var image: UIImage?
+    @AppStorage("name") var name: String = ""
     private var imageSubscription: AnyCancellable?
     private var saveFileURL: URL? {
         try? FileManager.default.url(
