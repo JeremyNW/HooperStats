@@ -17,7 +17,9 @@ struct MainView: View {
             StatsView()
                 .tabItem {
                 Label("Stats", systemImage: "person.circle.fill")
+                    
             }
+            
             SettingsView()
                 .tabItem {
                 Label("Settings", systemImage: "gearshape.fill")

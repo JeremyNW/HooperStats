@@ -13,10 +13,13 @@ struct StatsView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("James Smith")
+            ZStack {
+//                LinearGradient(colors: [], startPoint: .bottom, endPoint: .top).ignoresSafeArea()
+                VStack(alignment: .center) {
+                    
+                    TextField("Player Name", text: $model.name)
                     .padding()
-                VStack(alignment: .leading) {
+                    .multilineTextAlignment(.center)
                     if let image = model.image {
                         Image(uiImage: image)
                             .resizable(resizingMode: .stretch)
@@ -27,34 +30,32 @@ struct StatsView: View {
                         
                     } else {
                         
-                        Image(systemName: "person.circle")
+                        Image(systemName: "person.crop.circle.fill")
                             .resizable(resizingMode: .stretch)
                             .aspectRatio(contentMode: .fit)
                             .padding()
                             .frame(width: 200.0, height: 200.0)
+                            .foregroundColor(.secondary)
                     }
                     if !gameModel.games.isEmpty {
                         HStack {
-                            Text("PPG:")
-                                .padding()
+                            Text("PPG:").bold()
                             Text("\(model.pointsPerGame(games: gameModel.games), specifier: "%.2f")")
                             
                         }
-                        
+                        .padding()
                         HStack {
-                            Text("APG:")
-                                .padding()
+                            Text("APG:").bold()
                             Text("\(model.assistPerGame(games: gameModel.games), specifier: "%.2f")")
                         }
+                        .padding()
                         
                         HStack {
-                            Text("RPG:")
-                                .padding()
+                            Text("RPG:").bold()
                             Text("\(model.reboundsPerGame(games: gameModel.games), specifier: "%.2f")")
                         }
-                        
+                        .padding()
                     }
-                }
             }
             .navigationTitle("Stats")
             .onAppear(perform: gameModel.loadGames)
@@ -68,6 +69,7 @@ struct StatsView: View {
                     })
                 }
             }
+                
             .popover(item: $model.presentedView, content: { view in
                 switch view {
                 case .camera:
@@ -83,17 +85,20 @@ struct StatsView: View {
                 }, label: {
                     Text("Camera")
                 })
+                    
                 Button(action: {
                     model.presentedView = .photoPicker
                 }, label: {
                     Text("Gallery")
                 })
-                
             }
+            }
+            
         }
+        
     }
+    
 }
-// }
 
 struct StatsView_Previews: PreviewProvider {
     static var previews: some View {

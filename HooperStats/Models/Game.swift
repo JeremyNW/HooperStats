@@ -31,6 +31,15 @@ class Game: Codable {
 enum GameType: String, Codable {
     case threeVsThree = "3 vs. 3"
     case fiveVsFive = "5 vs. 5"
+    var imageName: String {
+        switch self {
+            
+        case .threeVsThree:
+           return "person.3"
+        case .fiveVsFive:
+            return "person"
+        }
+    }
 }
 
 

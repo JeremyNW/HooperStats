@@ -38,9 +38,6 @@ struct SettingsView: View {
                     NavigationLink(destination: ContactView()) {
                         Text("Contact Us")
                     }
-                    NavigationLink(destination: Text("Feedback")) {
-                        Text("Feedback")
-                    }
                 }
             }
             .navigationBarTitle("Settings", displayMode: .inline)

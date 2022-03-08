@@ -35,7 +35,7 @@ struct WalkthroughScreen: View {
         ZStack {
             
             if currentPage == 1 {
-                ScreenView(image: "image1", title: "Welcome to StreetHooperStats+", detail: "With this app you will become the best basketball player you can be!", bgColor: Color("lightYellow"), currentPage: $currentPage)
+                ScreenView(image: "image1", title: "Welcome to HooperStats+", detail: "With this app you will become the best basketball player you can be!", bgColor: Color("lightYellow"), currentPage: $currentPage)
                     .transition(.scale)
             }
             if currentPage == 2 {
