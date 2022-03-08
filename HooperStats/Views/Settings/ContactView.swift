@@ -11,9 +11,9 @@ struct ContactView: View {
     var body: some View {
         NavigationView {
             VStack{
-            Text("Tell us what you think about HooperStats+!")
-                .padding()
-            Text("You can reach us at https://macrina.tech/")
+                Text("Tell us what you think about HooperStats+!")
+                    .padding()
+                Text("You can reach us at https://JeremyNW.github.io")
                 
             }
         }

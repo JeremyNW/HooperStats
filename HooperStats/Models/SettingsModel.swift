@@ -33,13 +33,13 @@ class SettingsModel: ObservableObject {
         content.title = "Played any games recently?"
         content.subtitle = "Don't forget to record your stats!"
         content.sound = UNNotificationSound.default
-
+        
         // show this notification five seconds from now
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-
+        
         // choose a random identifier
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-
+        
         // add our notification request
         UNUserNotificationCenter.current().add(request)
         

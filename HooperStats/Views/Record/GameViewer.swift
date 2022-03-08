@@ -18,32 +18,32 @@ struct GameViewer: View {
                     .font(.headline)
                 
             }
-           
+            
             VStack(alignment: .leading) {
                 HStack {
-            Text("Points:")
+                    Text("Points:")
                         .bold()
-            Text("\(game.points)")
+                    Text("\(game.points)")
                 }
                 .padding()
                 HStack {
-            Text("Assists:")
+                    Text("Assists:")
                         .bold()
-            Text("\(game.assists)")
+                    Text("\(game.assists)")
                 }
                 .padding()
                 HStack {
-            Text("Rebounds:")
+                    Text("Rebounds:")
                         .bold()
-            Text("\(game.rebounds)")
+                    Text("\(game.rebounds)")
                 }
                 .padding()
             }
             VStack {
-            Text("Game Details:")
+                Text("Game Details:")
                     .padding()
-            Text(game.gameDetails)
-                .border(.thinMaterial)
+                Text(game.gameDetails)
+                    .padding()
             }
         }
         .navigationTitle(Text(game.date, style: .date))

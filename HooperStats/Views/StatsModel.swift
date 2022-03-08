@@ -32,7 +32,7 @@ class StatsViewModel: ObservableObject {
     }
     func loadImage() {
         if let saveFileURL = saveFileURL,
-        let data = try? Data(contentsOf: saveFileURL),
+           let data = try? Data(contentsOf: saveFileURL),
            let image = UIImage(data: data) {
             self.image = image
         }

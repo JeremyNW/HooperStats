@@ -1,5 +1,5 @@
 //
-//  GameModle.swift
+//  Game.swift
 //  HooperStats
 //
 //  Created by Jeremy Warren on 2/24/22.
@@ -35,7 +35,7 @@ enum GameType: String, Codable {
         switch self {
             
         case .threeVsThree:
-           return "person.3"
+            return "person.3"
         case .fiveVsFive:
             return "person"
         }
@@ -51,4 +51,4 @@ extension Game: Equatable, Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(ObjectIdentifier(self))
     }
- }
+}

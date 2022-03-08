@@ -59,7 +59,7 @@ struct WalkthroughScreen: View {
                     if currentPage < 4 {
                         currentPage += 1
                     } else {
-                    isOnboarded = true
+                        isOnboarded = true
                     }
                 }
             }, label: {

@@ -12,40 +12,32 @@ struct GameCreatorView: View {
     @StateObject var viewModel = GameCreatorModel()
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        VStack {
-            HStack{
-            Text("Game:")
+        Form {
+            
                 Picker("Game Type", selection: $viewModel.type) {
                     Text("5 vs. 5").tag(GameType.fiveVsFive)
                     Text("3 vs. 3").tag(GameType.threeVsThree)
-                }
                 
             }
             
-                Stepper("Points: \(viewModel.points.formatted())", value: $viewModel.points, in: 0...50, step: 1)
-                .padding()
-      
+            Stepper("Points: \(viewModel.points.formatted())", value: $viewModel.points, in: 0...50, step: 1)
+            
             Stepper("Assists: \(viewModel.assists.formatted())", value: $viewModel.assists, in: 0...20, step: 1)
-                .padding()
             
             Stepper("Rebounds: \(viewModel.rebounds.formatted())", value: $viewModel.rebounds, in: 0...25, step: 1)
-                .padding()
-          
-            HStack {
-                Text("Game Details")
-                TextField("Game Details", text: $viewModel.gameDetails)
-                    .textFieldStyle(.roundedBorder)
-                    .padding()
-                    .lineLimit(0)
+            
+            Section("Game Details") {
+                TextEditor(text: $viewModel.gameDetails)
+                    .border(.secondary)
+                
             }
-            .padding()
         }
         .navigationBarTitle("Create your Game", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button(action: {
                     recordViewModel.createGame(type: viewModel.type, points: Int(viewModel.points), assists: viewModel.assists, rebounds: viewModel.rebounds, gameDetails: viewModel.gameDetails, date: viewModel.date)
-                        dismiss()
+                    dismiss()
                 }, label: {
                     Text("Save")
                 })

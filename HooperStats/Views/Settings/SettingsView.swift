@@ -21,11 +21,11 @@ struct SettingsView: View {
                     Button(action: {
                         isOnboarded = false
                     }, label: {
-                       Text("Tutorial")
+                        Text("Tutorial")
                             .tint(.primary)
                     })
-                   
-                        Toggle("Notification", isOn: $isNotificationsEnabled)
+                    
+                    Toggle("Notification", isOn: $isNotificationsEnabled)
                     
                 }
                 Section("Extras") {
