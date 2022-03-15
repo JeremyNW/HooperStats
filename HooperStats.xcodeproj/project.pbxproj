@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F23CE9F27E01017002A8833 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23CE9E27E01017002A8833 /* ScheduleViewModel.swift */; };
 		1F435D4127CAFAD600E4B961 /* GameViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F435D4027CAFAD600E4B961 /* GameViewer.swift */; };
 		1F435D4327CAFAF300E4B961 /* GameViewerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F435D4227CAFAF300E4B961 /* GameViewerModel.swift */; };
 		1F435D4527CE719200E4B961 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F435D4427CE719200E4B961 /* ContentView.swift */; };
+		1F88DA9527DF7A9E00B81993 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F88DA9427DF7A9E00B81993 /* ScheduleView.swift */; };
+		1F88DA9727DF7E4800B81993 /* CalenderChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F88DA9627DF7E4800B81993 /* CalenderChooser.swift */; };
 		1FAED86D27D1161A00B4F24D /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAED86C27D1161A00B4F24D /* ContactView.swift */; };
 		1FAED86F27D3B43300B4F24D /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAED86E27D3B43300B4F24D /* SettingsModel.swift */; };
 		1FFA091527C550AD00DE7C13 /* HooperStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA091427C550AD00DE7C13 /* HooperStatsApp.swift */; };
@@ -29,9 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F23CE9E27E01017002A8833 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		1F23CEA027E01289002A8833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1F435D4027CAFAD600E4B961 /* GameViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewer.swift; sourceTree = "<group>"; };
 		1F435D4227CAFAF300E4B961 /* GameViewerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewerModel.swift; sourceTree = "<group>"; };
 		1F435D4427CE719200E4B961 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1F88DA9427DF7A9E00B81993 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		1F88DA9627DF7E4800B81993 /* CalenderChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderChooser.swift; sourceTree = "<group>"; };
 		1FAED86C27D1161A00B4F24D /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		1FAED86E27D3B43300B4F24D /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		1FFA091127C550AD00DE7C13 /* HooperStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HooperStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +96,7 @@
 		1FFA091327C550AD00DE7C13 /* HooperStats */ = {
 			isa = PBXGroup;
 			children = (
+				1F23CEA027E01289002A8833 /* Info.plist */,
 				1FFA091427C550AD00DE7C13 /* HooperStatsApp.swift */,
 				1FFA092827C7D0E900DE7C13 /* Views */,
 				1FFA092E27C92AED00DE7C13 /* Models */,
@@ -127,6 +135,9 @@
 				1FFA093327C9374D00DE7C13 /* GameCreatorModel.swift */,
 				1F435D4027CAFAD600E4B961 /* GameViewer.swift */,
 				1F435D4227CAFAF300E4B961 /* GameViewerModel.swift */,
+				1F88DA9427DF7A9E00B81993 /* ScheduleView.swift */,
+				1F88DA9627DF7E4800B81993 /* CalenderChooser.swift */,
+				1F23CE9E27E01017002A8833 /* ScheduleViewModel.swift */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -233,12 +244,15 @@
 				1FFA093427C9374D00DE7C13 /* GameCreatorModel.swift in Sources */,
 				7F64563D27C948D900A9E4B6 /* PhotoPicker.swift in Sources */,
 				1FAED86F27D3B43300B4F24D /* SettingsModel.swift in Sources */,
+				1F23CE9F27E01017002A8833 /* ScheduleViewModel.swift in Sources */,
 				1FFA092727C7D0DF00DE7C13 /* SettingsView.swift in Sources */,
 				1FAED86D27D1161A00B4F24D /* ContactView.swift in Sources */,
+				1F88DA9527DF7A9E00B81993 /* ScheduleView.swift in Sources */,
 				1FFA092C27C92AD400DE7C13 /* RecordViewModel.swift in Sources */,
 				1FFA092527C7D0D800DE7C13 /* StatsView.swift in Sources */,
 				7F64563F27C94A4000A9E4B6 /* StatsModel.swift in Sources */,
 				7F64563B27C9485B00A9E4B6 /* Camera.swift in Sources */,
+				1F88DA9727DF7E4800B81993 /* CalenderChooser.swift in Sources */,
 				1F435D4327CAFAF300E4B961 /* GameViewerModel.swift in Sources */,
 				1FFA091727C550AD00DE7C13 /* RecordView.swift in Sources */,
 				1F435D4127CAFAD600E4B961 /* GameViewer.swift in Sources */,
@@ -380,7 +394,10 @@
 				DEVELOPMENT_TEAM = FL58422VA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HooperStats/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Use camera to take profile picture";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Contact?";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Can we send you reminders?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -411,7 +428,10 @@
 				DEVELOPMENT_TEAM = FL58422VA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HooperStats/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Use camera to take profile picture";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Contact?";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Can we send you reminders?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

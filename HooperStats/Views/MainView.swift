@@ -14,9 +14,13 @@ struct MainView: View {
                 .tabItem {
                     Label("Record", systemImage: "pencil")
                 }
+            ScheduleView()
+                .tabItem {
+                    Label("Schedule", systemImage: "calendar")
+                }
             StatsView()
                 .tabItem {
-                    Label("Stats", systemImage: "person.circle.fill")
+                    Label("Profile", systemImage: "person.circle.fill")
                     
                 }
             
@@ -24,6 +28,7 @@ struct MainView: View {
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
+         
         }
     }
 }
