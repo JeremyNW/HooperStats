@@ -38,10 +38,14 @@ struct RecordView: View {
                 }
                 .onDelete(perform: model.delete(indexSet:))
                 } else {
-                    Text("Games you record will be displayed here!")
+                    VStack {
+                    Text("Once you record your games they will show up here!")
                         .foregroundColor(.secondary)
                         .padding()
-                        .font(.headline)
+                        .font(.title2)
+                    LottieView()
+                        .frame(width: 300, height: 350, alignment: .center)
+                    }
                 }
             }
             .navigationBarTitle("Record A Game", displayMode: .inline)
