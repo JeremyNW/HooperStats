@@ -16,6 +16,8 @@ struct RecordView: View {
     var body: some View {
         NavigationView {
             List {
+                
+                if !model.games.isEmpty {
                 ForEach(model.games, id: \.self) { game in
                     NavigationLink(destination: GameViewer(game: game)) {
                         VStack(alignment: .leading) {
@@ -28,13 +30,19 @@ struct RecordView: View {
                                     .padding(1)
                                 Text("Points: \(game.points)")
                                     .font(.body)
-                                    .padding(1)
-                                
+                                    .padding()
+                            
                             }
                         }
                     }
                 }
                 .onDelete(perform: model.delete(indexSet:))
+                } else {
+                    Text("Games you record will be displayed here!")
+                        .foregroundColor(.secondary)
+                        .padding()
+                        .font(.headline)
+                }
             }
             .navigationBarTitle("Record A Game", displayMode: .inline)
             .onAppear(perform: model.loadGames)
@@ -45,7 +53,7 @@ struct RecordView: View {
                     }
                 }
             }
-        }
+            }
     }
 }
 

@@ -8,54 +8,66 @@
 import SwiftUI
 
 struct StatsView: View {
+    @AppStorage("playerName") var name = ""
     @StateObject var gameModel = RecordViewModel()
     @StateObject var model = StatsViewModel()
     
     var body: some View {
         NavigationView {
             ZStack {
-               Form {
-                   VStack(alignment: .center) {
-                    TextField("Player Name", text: $model.name)
-                        .padding()
-                        .multilineTextAlignment(.center)
-                    if let image = model.image {
-                        Image(uiImage: image)
-                            .resizable(resizingMode: .stretch)
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 200.0, height: 200.0)
-                            .cornerRadius(.infinity)
-                        
-                    } else {
-                        
-                        Image(systemName: "person.crop.circle.fill")
-                            .resizable(resizingMode: .stretch)
-                            .aspectRatio(contentMode: .fit)
+                Form {
+                    VStack(alignment: .center) {
+                        Text(name)
+                            .font(.largeTitle)
                             .padding()
-                            .frame(width: 200.0, height: 200.0)
-                            .foregroundColor(.secondary)
-                    }
-                    if !gameModel.games.isEmpty {
-                        HStack {
-                            Text("PPG:").bold()
-                            Text("\(model.pointsPerGame(games: gameModel.games), specifier: "%.2f")")
-                            
-                        }
-                        .padding()
-                        HStack {
-                            Text("APG:").bold()
-                            Text("\(model.assistPerGame(games: gameModel.games), specifier: "%.2f")")
-                        }
-                        .padding()
+                            .multilineTextAlignment(.center)
                         
-                        HStack {
-                            Text("RPG:").bold()
-                            Text("\(model.reboundsPerGame(games: gameModel.games), specifier: "%.2f")")
+                        if let image = model.image {
+                            Image(uiImage: image)
+                                .resizable(resizingMode: .stretch)
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 200.0, height: 200.0)
+                                .cornerRadius(.infinity)
+                            
+                        } else {
+                            
+                            Image(systemName: "person.crop.circle.fill")
+                                .resizable(resizingMode: .stretch)
+                                .aspectRatio(contentMode: .fit)
+                                .padding()
+                                .frame(width: 200.0, height: 200.0)
+                                .foregroundColor(.secondary)
                         }
-                        .padding()
+                        if !gameModel.games.isEmpty {
+                            
+                            HStack {
+                                Text("PPG:").bold()
+                                Text("\(model.pointsPerGame(games: gameModel.games), specifier: "%.2f")")
+                                
+                            }
+                            .padding()
+                            HStack {
+                                Text("APG:").bold()
+                                Text("\(model.assistPerGame(games: gameModel.games), specifier: "%.2f")")
+                            }
+                            .padding()
+                            
+                            HStack {
+                                Text("RPG:").bold()
+                                Text("\(model.reboundsPerGame(games: gameModel.games), specifier: "%.2f")")
+                            }
+                            .padding()
+                            
+                            
+                        } else {
+                            Text("Once you record games, your stats will be displayed here")
+                                .foregroundColor(.secondary)
+                                .multilineTextAlignment(.center)
+                                .padding()
+                        }
                     }
+                    .frame(maxWidth: .infinity)
                 }
-               }
                 .navigationTitle("Stats")
                 .onAppear(perform: gameModel.loadGames)
                 .onAppear(perform: model.onAppear)
