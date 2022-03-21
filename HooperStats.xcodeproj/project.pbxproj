@@ -11,6 +11,9 @@
 		1F435D4127CAFAD600E4B961 /* GameViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F435D4027CAFAD600E4B961 /* GameViewer.swift */; };
 		1F435D4327CAFAF300E4B961 /* GameViewerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F435D4227CAFAF300E4B961 /* GameViewerModel.swift */; };
 		1F435D4527CE719200E4B961 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F435D4427CE719200E4B961 /* ContentView.swift */; };
+		1F7A09CF27E2295400FE1E64 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1F7A09CE27E2295400FE1E64 /* Lottie */; };
+		1F7A09D127E229F500FE1E64 /* BasketballLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F7A09D027E229F400FE1E64 /* BasketballLottie.json */; };
+		1F7A09D327E22ADB00FE1E64 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A09D227E22ADB00FE1E64 /* LottieView.swift */; };
 		1F88DA9527DF7A9E00B81993 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F88DA9427DF7A9E00B81993 /* ScheduleView.swift */; };
 		1F88DA9727DF7E4800B81993 /* CalenderChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F88DA9627DF7E4800B81993 /* CalenderChooser.swift */; };
 		1FAED86D27D1161A00B4F24D /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAED86C27D1161A00B4F24D /* ContactView.swift */; };
@@ -37,6 +40,8 @@
 		1F435D4027CAFAD600E4B961 /* GameViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewer.swift; sourceTree = "<group>"; };
 		1F435D4227CAFAF300E4B961 /* GameViewerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewerModel.swift; sourceTree = "<group>"; };
 		1F435D4427CE719200E4B961 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1F7A09D027E229F400FE1E64 /* BasketballLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BasketballLottie.json; path = ../../../../Downloads/BasketballLottie.json; sourceTree = "<group>"; };
+		1F7A09D227E22ADB00FE1E64 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		1F88DA9427DF7A9E00B81993 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		1F88DA9627DF7E4800B81993 /* CalenderChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderChooser.swift; sourceTree = "<group>"; };
 		1FAED86C27D1161A00B4F24D /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7A09CF27E2295400FE1E64 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +107,8 @@
 				1FFA092827C7D0E900DE7C13 /* Views */,
 				1FFA092E27C92AED00DE7C13 /* Models */,
 				1FFA091827C550AE00DE7C13 /* Assets.xcassets */,
+				1F7A09D027E229F400FE1E64 /* BasketballLottie.json */,
+				1F7A09D227E22ADB00FE1E64 /* LottieView.swift */,
 				1FFA091A27C550AE00DE7C13 /* Preview Content */,
 			);
 			path = HooperStats;
@@ -187,6 +195,9 @@
 			dependencies = (
 			);
 			name = HooperStats;
+			packageProductDependencies = (
+				1F7A09CE27E2295400FE1E64 /* Lottie */,
+			);
 			productName = HooperStats;
 			productReference = 1FFA091127C550AD00DE7C13 /* HooperStats.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 1FFA090827C550AD00DE7C13;
+			packageReferences = (
+				1F7A09CD27E2295400FE1E64 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 1FFA091227C550AD00DE7C13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7A09D127E229F500FE1E64 /* BasketballLottie.json in Resources */,
 				1FFA091C27C550AE00DE7C13 /* Preview Assets.xcassets in Resources */,
 				1FFA091927C550AE00DE7C13 /* Assets.xcassets in Resources */,
 			);
@@ -252,6 +267,7 @@
 				1FFA092527C7D0D800DE7C13 /* StatsView.swift in Sources */,
 				7F64563F27C94A4000A9E4B6 /* StatsModel.swift in Sources */,
 				7F64563B27C9485B00A9E4B6 /* Camera.swift in Sources */,
+				1F7A09D327E22ADB00FE1E64 /* LottieView.swift in Sources */,
 				1F88DA9727DF7E4800B81993 /* CalenderChooser.swift in Sources */,
 				1F435D4327CAFAF300E4B961 /* GameViewerModel.swift in Sources */,
 				1FFA091727C550AD00DE7C13 /* RecordView.swift in Sources */,
@@ -473,6 +489,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F7A09CD27E2295400FE1E64 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F7A09CE27E2295400FE1E64 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F7A09CD27E2295400FE1E64 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FFA090927C550AD00DE7C13 /* Project object */;
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import UserNotifications
 
 struct SettingsView: View {
-    
+    @AppStorage("playerName") var name = ""
     @AppStorage("isOnboarded") var isOnboarded = false
     @AppStorage("isNotificationsEnabled") var isNotificationsEnabled = false
     @StateObject var model = SettingsModel()
@@ -17,6 +17,10 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
+                Section("Your Profile") {
+                TextField("Enter Your Name Here", text: $name)
+                }
+                
                 Section("Preferences") {
                     Button(action: {
                         isOnboarded = false
@@ -25,7 +29,7 @@ struct SettingsView: View {
                             .tint(.primary)
                     })
                     
-                    Toggle("Notification", isOn: $isNotificationsEnabled)
+                    Toggle("Notifications", isOn: $isNotificationsEnabled)
                     
                 }
                 Section("Extras") {
