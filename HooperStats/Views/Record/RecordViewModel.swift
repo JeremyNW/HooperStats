@@ -22,7 +22,7 @@ class RecordViewModel: ObservableObject {
     }
     
     func createGame(type: GameType, points: Int, assists: Int, rebounds: Int, gameDetails: String, date: Date) {
-        let game = Game(type: type, points: points, assists: assists, rebounds: rebounds, gameDetails: gameDetails, date: date)
+        let game = Game(type: type, points: points, assists: assists, rebounds: rebounds, gameDetails: gameDetails)
         games.append(game)
         saveGames()
     }
