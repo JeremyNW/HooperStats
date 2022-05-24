@@ -14,7 +14,7 @@ struct MainView: View {
                 .tabItem {
                     Label("Record", systemImage: "pencil")
                 }
-            ScheduleView()
+            MatchView()
                 .tabItem {
                     Label("Schedule", systemImage: "calendar")
                 }
