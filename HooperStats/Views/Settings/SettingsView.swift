@@ -48,6 +48,7 @@ struct SettingsView: View {
         }
         .onChange(of: isNotificationsEnabled) { isEnabled in
             model.requestNotificationAuthorization()
+            
         }
         
     }

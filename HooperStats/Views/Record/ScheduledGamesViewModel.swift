@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import UserNotifications
 
 class ScheduledGamesViewModel: ObservableObject {
     @Published var scheduledGames: [ScheduledGame] = []
@@ -28,6 +29,17 @@ class ScheduledGamesViewModel: ObservableObject {
     
     func create() {
         let scheduledGame = ScheduledGame(date: date, gameType: gameType, prep: prep)
+        
+        let alert = UNMutableNotificationContent()
+        alert.title = "You have a game!"
+        alert.subtitle = "It is a \(scheduledGame.gameType), so bring your best!"
+        alert.sound = UNNotificationSound.default
+        
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: scheduledGame.date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        let request = UNNotificationRequest(identifier: scheduledGame.id, content: alert, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
         scheduledGames.append(scheduledGame)
         saveGames()
     }
@@ -43,6 +55,9 @@ class ScheduledGamesViewModel: ObservableObject {
         } catch {
             print(error)
         }
+        
+        
+        
     }
     
     func loadGames() {

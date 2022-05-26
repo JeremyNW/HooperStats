@@ -47,8 +47,10 @@ struct ScheduledGames: View {
                         ForEach(GameType.allCases, id: \.rawValue) { type in
                             Label(type.rawValue, systemImage: type.imageName)
                                 .tag(type)
+                                
                         }
                     }
+                    .pickerStyle(.segmented)
                 }
                 .padding()
             

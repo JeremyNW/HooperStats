@@ -8,6 +8,7 @@
 import Foundation
 
 struct ScheduledGame: Codable, Hashable {
+    var id: String = UUID().uuidString
     let date: Date
     let gameType: GameType
     let prep: String
