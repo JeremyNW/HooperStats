@@ -16,7 +16,7 @@ class Game: Codable {
     var gameDetails: String
     var date: Date
     
-    init(type: GameType, points: Int, assists: Int, rebounds: Int, gameDetails: String, date: Date) {
+    init(type: GameType, points: Int, assists: Int, rebounds: Int, gameDetails: String) {
         self.type = type
         self.points = points
         self.assists = assists
@@ -28,7 +28,7 @@ class Game: Codable {
 }
 
 
-enum GameType: String, Codable {
+enum GameType: String, Codable, CaseIterable {
     case threeVsThree = "3 vs. 3"
     case fiveVsFive = "5 vs. 5"
     var imageName: String {

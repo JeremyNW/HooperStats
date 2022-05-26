@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F3481FF27F3DF7400D10E42 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3481FE27F3DF7400D10E42 /* MatchView.swift */; };
-		1F34820127F3DFB300D10E42 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34820027F3DFB300D10E42 /* Match.swift */; };
+		1F3481FF27F3DF7400D10E42 /* ScheduledGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3481FE27F3DF7400D10E42 /* ScheduledGames.swift */; };
 		1F435D4127CAFAD600E4B961 /* GameViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F435D4027CAFAD600E4B961 /* GameViewer.swift */; };
 		1F435D4327CAFAF300E4B961 /* GameViewerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F435D4227CAFAF300E4B961 /* GameViewerModel.swift */; };
 		1F435D4527CE719200E4B961 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F435D4427CE719200E4B961 /* ContentView.swift */; };
 		1F7A09CF27E2295400FE1E64 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1F7A09CE27E2295400FE1E64 /* Lottie */; };
 		1F7A09D127E229F500FE1E64 /* BasketballLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F7A09D027E229F400FE1E64 /* BasketballLottie.json */; };
 		1F7A09D327E22ADB00FE1E64 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A09D227E22ADB00FE1E64 /* LottieView.swift */; };
+		1F8523B3280D119E00D4EF01 /* ScheduledGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8523B2280D119E00D4EF01 /* ScheduledGame.swift */; };
+		1F8523B7280D142B00D4EF01 /* ScheduledGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8523B6280D142B00D4EF01 /* ScheduledGamesViewModel.swift */; };
 		1FAED86D27D1161A00B4F24D /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAED86C27D1161A00B4F24D /* ContactView.swift */; };
 		1FAED86F27D3B43300B4F24D /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAED86E27D3B43300B4F24D /* SettingsModel.swift */; };
 		1FFA091527C550AD00DE7C13 /* HooperStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA091427C550AD00DE7C13 /* HooperStatsApp.swift */; };
@@ -35,13 +36,14 @@
 
 /* Begin PBXFileReference section */
 		1F23CEA027E01289002A8833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		1F3481FE27F3DF7400D10E42 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
-		1F34820027F3DFB300D10E42 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		1F3481FE27F3DF7400D10E42 /* ScheduledGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledGames.swift; sourceTree = "<group>"; };
 		1F435D4027CAFAD600E4B961 /* GameViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewer.swift; sourceTree = "<group>"; };
 		1F435D4227CAFAF300E4B961 /* GameViewerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewerModel.swift; sourceTree = "<group>"; };
 		1F435D4427CE719200E4B961 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1F7A09D027E229F400FE1E64 /* BasketballLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BasketballLottie.json; path = ../../../../Downloads/BasketballLottie.json; sourceTree = "<group>"; };
 		1F7A09D227E22ADB00FE1E64 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		1F8523B2280D119E00D4EF01 /* ScheduledGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledGame.swift; sourceTree = "<group>"; };
+		1F8523B6280D142B00D4EF01 /* ScheduledGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledGamesViewModel.swift; sourceTree = "<group>"; };
 		1FAED86C27D1161A00B4F24D /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		1FAED86E27D3B43300B4F24D /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		1FFA091127C550AD00DE7C13 /* HooperStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HooperStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +143,8 @@
 				1FFA093327C9374D00DE7C13 /* GameCreatorModel.swift */,
 				1F435D4027CAFAD600E4B961 /* GameViewer.swift */,
 				1F435D4227CAFAF300E4B961 /* GameViewerModel.swift */,
-				1F3481FE27F3DF7400D10E42 /* MatchView.swift */,
+				1F3481FE27F3DF7400D10E42 /* ScheduledGames.swift */,
+				1F8523B6280D142B00D4EF01 /* ScheduledGamesViewModel.swift */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				1F34820027F3DFB300D10E42 /* Match.swift */,
 				1FFA092927C858D100DE7C13 /* Game.swift */,
 				1FAED86E27D3B43300B4F24D /* SettingsModel.swift */,
+				1F8523B2280D119E00D4EF01 /* ScheduledGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,10 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F8523B3280D119E00D4EF01 /* ScheduledGame.swift in Sources */,
 				1FFA093427C9374D00DE7C13 /* GameCreatorModel.swift in Sources */,
+				1F8523B7280D142B00D4EF01 /* ScheduledGamesViewModel.swift in Sources */,
 				7F64563D27C948D900A9E4B6 /* PhotoPicker.swift in Sources */,
 				1FAED86F27D3B43300B4F24D /* SettingsModel.swift in Sources */,
-				1F34820127F3DFB300D10E42 /* Match.swift in Sources */,
 				1FFA092727C7D0DF00DE7C13 /* SettingsView.swift in Sources */,
 				1FAED86D27D1161A00B4F24D /* ContactView.swift in Sources */,
 				1FFA092C27C92AD400DE7C13 /* RecordViewModel.swift in Sources */,
@@ -272,7 +277,7 @@
 				1FFA093227C934BF00DE7C13 /* GameCreatorView.swift in Sources */,
 				1FFA092327C7D08B00DE7C13 /* MainView.swift in Sources */,
 				1FFA091527C550AD00DE7C13 /* HooperStatsApp.swift in Sources */,
-				1F3481FF27F3DF7400D10E42 /* MatchView.swift in Sources */,
+				1F3481FF27F3DF7400D10E42 /* ScheduledGames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

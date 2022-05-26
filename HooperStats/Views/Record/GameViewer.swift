@@ -53,6 +53,6 @@ struct GameViewer: View {
 
 struct GameViewer_Previews: PreviewProvider {
     static var previews: some View {
-        GameViewer(game: Game(type: .threeVsThree, points: 10, assists: 5, rebounds: 3, gameDetails: "It was a fun game.", date: Date.now))
+        GameViewer(game: Game(type: .threeVsThree, points: 10, assists: 5, rebounds: 3, gameDetails: "It was a fun game."))
     }
 }
