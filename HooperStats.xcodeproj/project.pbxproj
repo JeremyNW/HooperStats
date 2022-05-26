@@ -152,6 +152,7 @@
 		1FFA092E27C92AED00DE7C13 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1F34820027F3DFB300D10E42 /* Match.swift */,
 				1FFA092927C858D100DE7C13 /* Game.swift */,
 				1FAED86E27D3B43300B4F24D /* SettingsModel.swift */,
 				1F8523B2280D119E00D4EF01 /* ScheduledGame.swift */,
