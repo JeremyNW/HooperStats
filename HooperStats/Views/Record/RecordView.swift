@@ -43,7 +43,7 @@ struct RecordView: View {
                         .foregroundColor(.secondary)
                         .padding()
                         .font(.title2)
-                    LottieView()
+                        LottieView()
                         .frame(width: 300, height: 350, alignment: .center)
                     }
                 }

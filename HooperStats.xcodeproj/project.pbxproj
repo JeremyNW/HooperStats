@@ -18,6 +18,8 @@
 		1F8523B7280D142B00D4EF01 /* ScheduledGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8523B6280D142B00D4EF01 /* ScheduledGamesViewModel.swift */; };
 		1FAED86D27D1161A00B4F24D /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAED86C27D1161A00B4F24D /* ContactView.swift */; };
 		1FAED86F27D3B43300B4F24D /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAED86E27D3B43300B4F24D /* SettingsModel.swift */; };
+		1FAF5B2F28871280009D72D5 /* dunking.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FAF5B2E28871280009D72D5 /* dunking.json */; };
+		1FAF5B34288714FB009D72D5 /* DunkingLottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF5B33288714FB009D72D5 /* DunkingLottie.swift */; };
 		1FFA091527C550AD00DE7C13 /* HooperStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA091427C550AD00DE7C13 /* HooperStatsApp.swift */; };
 		1FFA091727C550AD00DE7C13 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA091627C550AD00DE7C13 /* RecordView.swift */; };
 		1FFA091927C550AE00DE7C13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFA091827C550AE00DE7C13 /* Assets.xcassets */; };
@@ -46,6 +48,10 @@
 		1F8523B6280D142B00D4EF01 /* ScheduledGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledGamesViewModel.swift; sourceTree = "<group>"; };
 		1FAED86C27D1161A00B4F24D /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		1FAED86E27D3B43300B4F24D /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		1FAF5B2E28871280009D72D5 /* dunking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = dunking.json; path = ../../../../Downloads/dunking.json; sourceTree = "<group>"; };
+		1FAF5B31288714E5009D72D5 /* dunking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dunking.json; sourceTree = "<group>"; };
+		1FAF5B32288714EC009D72D5 /* BasketballLottie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasketballLottie.json; sourceTree = "<group>"; };
+		1FAF5B33288714FB009D72D5 /* DunkingLottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DunkingLottie.swift; sourceTree = "<group>"; };
 		1FFA091127C550AD00DE7C13 /* HooperStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HooperStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFA091427C550AD00DE7C13 /* HooperStatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HooperStatsApp.swift; sourceTree = "<group>"; };
 		1FFA091627C550AD00DE7C13 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
@@ -75,6 +81,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FAF5B30288714DE009D72D5 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1F7A09D227E22ADB00FE1E64 /* LottieView.swift */,
+				1FAF5B33288714FB009D72D5 /* DunkingLottie.swift */,
+				1FAF5B31288714E5009D72D5 /* dunking.json */,
+				1FAF5B32288714EC009D72D5 /* BasketballLottie.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
 		1FE2B8E927CA8E9F008AF445 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,9 +123,10 @@
 				1FFA091427C550AD00DE7C13 /* HooperStatsApp.swift */,
 				1FFA092827C7D0E900DE7C13 /* Views */,
 				1FFA092E27C92AED00DE7C13 /* Models */,
-				1FFA091827C550AE00DE7C13 /* Assets.xcassets */,
 				1F7A09D027E229F400FE1E64 /* BasketballLottie.json */,
-				1F7A09D227E22ADB00FE1E64 /* LottieView.swift */,
+				1FFA091827C550AE00DE7C13 /* Assets.xcassets */,
+				1FAF5B2E28871280009D72D5 /* dunking.json */,
+				1FAF5B30288714DE009D72D5 /* LottieFiles */,
 				1FFA091A27C550AE00DE7C13 /* Preview Content */,
 			);
 			path = HooperStats;
@@ -243,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAF5B2F28871280009D72D5 /* dunking.json in Resources */,
 				1F7A09D127E229F500FE1E64 /* BasketballLottie.json in Resources */,
 				1FFA091C27C550AE00DE7C13 /* Preview Assets.xcassets in Resources */,
 				1FFA091927C550AE00DE7C13 /* Assets.xcassets in Resources */,
@@ -265,6 +284,7 @@
 				1FAED86D27D1161A00B4F24D /* ContactView.swift in Sources */,
 				1FFA092C27C92AD400DE7C13 /* RecordViewModel.swift in Sources */,
 				1FFA092527C7D0D800DE7C13 /* StatsView.swift in Sources */,
+				1FAF5B34288714FB009D72D5 /* DunkingLottie.swift in Sources */,
 				7F64563F27C94A4000A9E4B6 /* StatsModel.swift in Sources */,
 				7F64563B27C9485B00A9E4B6 /* Camera.swift in Sources */,
 				1F7A09D327E22ADB00FE1E64 /* LottieView.swift in Sources */,

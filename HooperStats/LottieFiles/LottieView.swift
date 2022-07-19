@@ -12,10 +12,13 @@ import UIKit
 struct LottieView: UIViewRepresentable {
     
     
+    static let shared = LottieView()
+    
     typealias UIViewType = UIView
     
     func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {
         let view = UIView(frame: .zero)
+
         
         let animationView = AnimationView()
         animationView.animation = Animation.named("BasketballLottie")
@@ -23,7 +26,7 @@ struct LottieView: UIViewRepresentable {
         animationView.loopMode = .loop
         animationView.play()
         view.addSubview(animationView)
-        
+
         animationView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -31,6 +34,7 @@ struct LottieView: UIViewRepresentable {
             animationView.heightAnchor.constraint(equalTo: view.heightAnchor)
         ])
         
+
         
         return view
     }

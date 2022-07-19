@@ -94,6 +94,7 @@ struct WalkthroughScreen: View {
 
 struct ScreenView: View {
     
+    @AppStorage("isOnboarded") var isOnboarded = false
     var image: String
     var title: String
     var detail: String
@@ -129,12 +130,21 @@ struct ScreenView: View {
                 
                 Button(action: {
                     withAnimation(.easeInOut) {
-                        currentPage = 4
+                        
+                        // if when the button is pressed the currentPage is 4 then when isOnboarded is true the walkthroughscreen resigns
+                        if currentPage == 4 {
+                            isOnboarded = true
+                        } else {
+                            // the button will skip to the fourth page
+                            currentPage = 4
+                        }
                     }
                 }, label: {
-                    Text("Skip")
+                 
+                    Text(currentPage == 4 ? "Done" : "Skip")
                         .fontWeight(.semibold)
                         .kerning(1.2)
+                 
                 })
                 
             }
