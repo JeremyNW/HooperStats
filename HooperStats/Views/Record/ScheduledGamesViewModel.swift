@@ -32,7 +32,7 @@ class ScheduledGamesViewModel: ObservableObject {
         
         let alert = UNMutableNotificationContent()
         alert.title = "You have a game!"
-        alert.subtitle = "It is a \(scheduledGame.gameType), so bring your best!"
+        alert.subtitle = "It's a \(scheduledGame.gameType.rawValue), so bring your best!"
         alert.sound = UNNotificationSound.default
         
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: scheduledGame.date)
@@ -74,6 +74,7 @@ class ScheduledGamesViewModel: ObservableObject {
     
     func delete(indexSet: IndexSet) {
         guard let index = indexSet.first else { return }
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [scheduledGames[index].id])
         scheduledGames.remove(at: index)
         saveGames()
     }
